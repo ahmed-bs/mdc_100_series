@@ -39,10 +39,10 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             const SizedBox(height: 120.0),
-            // TODO: Add TextField widgets (101)
+            //  Add TextField widgets (101)
 // [Name]
-            TextField(
-              decoration: const InputDecoration(
+            const TextField(
+              decoration: InputDecoration(
                 filled: true,
                 labelText: 'Username',
               ),
@@ -50,8 +50,8 @@ class _LoginPageState extends State<LoginPage> {
 // spacer
             const SizedBox(height: 12.0),
 // [Password]
-            TextField(
-              decoration: const InputDecoration(
+            const TextField(
+              decoration: InputDecoration(
                 filled: true,
                 labelText: 'Password',
               ),
@@ -60,8 +60,13 @@ class _LoginPageState extends State<LoginPage> {
             // TODO: Wrap Username with AccentColorOverride (103)
             // TODO: Remove filled: true values (103)
             // TODO: Wrap Password with AccentColorOverride (103)
-            // TODO: Add TextField widgets (101)
-            // TODO: Add button bar (101)
+            // Add button bar (101)
+            const ButtonBar(
+              // TODO: Add a beveled rectangular border to CANCEL (103)
+              children: <Widget>[
+                // TODO: Add buttons (101)
+              ],
+            )
           ],
         ),
       ),
