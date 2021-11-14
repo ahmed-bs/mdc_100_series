@@ -43,17 +43,20 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 120.0),
             //  Add TextField widgets (101)
 // [Name]
-             const TextField(
-              decoration: InputDecoration(
+               TextField(
+                  controller: _usernameController,
+              decoration: const InputDecoration(
                 filled: true,
                 labelText: 'Username',
               ),
             ),
 // spacer
             const SizedBox(height: 12.0),
+//  Add TextField widgets (101)
 // [Password]
-             const TextField(
-              decoration: InputDecoration(
+              TextField(
+               controller: _passwordController,
+              decoration: const InputDecoration(
                 filled: true,
                 labelText: 'Password',
               ),
