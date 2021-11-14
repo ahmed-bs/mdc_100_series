@@ -34,9 +34,9 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
+                children: const <Widget>[
                   Text('Title'),
-                  const SizedBox(height: 8.0),
+                  SizedBox(height: 8.0),
                   Text('Secondary Text'),
                 ],
               ),
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
     ],
       ),
       // Add a grid view (102)
-      body: GridView.count(
+    /*  body: GridView.count(
         crossAxisCount: 2,
         padding: const EdgeInsets.all(16.0),
         childAspectRatio: 8.0 / 9.0,
@@ -121,6 +121,13 @@ class HomePage extends StatelessWidget {
             ),
           )
         ],
+      ),*/
+      // Add a grid view (102)
+      body: GridView.count(
+          crossAxisCount: 2,
+          padding: const EdgeInsets.all(16.0),
+          childAspectRatio: 8.0 / 9.0,
+          children: _buildGridCards(10) // Replace
       ),
       //Set resizeToAvoidBottomInset (101)
       resizeToAvoidBottomInset: false,
