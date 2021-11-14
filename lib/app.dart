@@ -32,7 +32,8 @@ class ShrineApp extends StatelessWidget {
       // TODO: Change backLayer field value to CategoryMenuPage (104)
       initialRoute: '/login',
       onGenerateRoute: _getRoute,
-      // TODO: Add a theme (103)
+      //  Add a theme (103)
+      theme: _kShrineTheme, // New code
     );
   }
 
