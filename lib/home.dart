@@ -57,6 +57,8 @@ class HomePage extends StatelessWidget {
       //  Add app bar (102)
       appBar: AppBar(
         // TODO: Add buttons and title (102)
+          title: const Text('SHRINE')
+        // TODO: Add trailing buttons (102)
       ),
       // TODO: Add a grid view (102)
       body: Center(
