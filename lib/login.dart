@@ -62,27 +62,29 @@ class _LoginPageState extends State<LoginPage> {
 
 
 // spacer
-            const SizedBox(height: 12.0),
-//  Add TextField widgets (101)
-// [Password]
 
-
-            // Remove filled: true values (103)
             TextField(
               controller: _usernameController,
-              decoration: const InputDecoration(
-                // Removed filled: true
+              decoration: InputDecoration(
                 labelText: 'Username',
+                labelStyle: TextStyle(
+                    color: _usernameFocusNode.hasFocus
+                        ? Theme.of(context).colorScheme.secondary
+                        : _unfocusedColor),
               ),
+              focusNode: _usernameFocusNode,
             ),
             const SizedBox(height: 12.0),
             TextField(
               controller: _passwordController,
-              decoration: const InputDecoration(
-                // Removed filled: true
+              decoration: InputDecoration(
                 labelText: 'Password',
+                labelStyle: TextStyle(
+                    color: _passwordFocusNode.hasFocus
+                        ? Theme.of(context).colorScheme.secondary
+                        : _unfocusedColor),
               ),
-              obscureText: true,
+              focusNode: _passwordFocusNode,
             ),
             // TODO: Wrap Password with AccentColorOverride (103)
             // Add button bar (101)
@@ -102,9 +104,15 @@ class _LoginPageState extends State<LoginPage> {
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: const Text('NEXT'),
+                    style: ButtonStyle(
+                      elevation: MaterialStateProperty.all(8.0),
+
+                    ),
                   onPressed: () {
                     //  Show the next page (101)
                     Navigator.pop(context);
+
+
                   },
                 ),
               ],
