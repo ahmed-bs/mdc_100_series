@@ -67,6 +67,23 @@ class _LoginPageState extends State<LoginPage> {
             ),
             // TODO: Wrap Username with AccentColorOverride (103)
             // TODO: Remove filled: true values (103)
+            // Remove filled: true values (103)
+            TextField(
+              controller: _usernameController,
+              decoration: const InputDecoration(
+                // Removed filled: true
+                labelText: 'Username',
+              ),
+            ),
+            const SizedBox(height: 12.0),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                // Removed filled: true
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
             // TODO: Wrap Password with AccentColorOverride (103)
             // Add button bar (101)
              ButtonBar(
